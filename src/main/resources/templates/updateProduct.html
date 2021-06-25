@@ -28,7 +28,7 @@
 
                                 <div class="form-group">
                                     <label for="productPrice">Precio:</label>
-                                    <input type="number"  class="form-control" id="productPrice" name="productPrice" th:field="*{productPrice}"/>
+                                    <input type="number"  max="99999" class="form-control" id="productPrice" name="productPrice" th:field="*{productPrice}"/>
                                     <span th:if="${#fields.hasErrors('productPrice')}" th:errors="*{productPrice}" class="error" >Precio Inválido</span>
                                 </div>
 
