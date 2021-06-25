@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Abarrotes Don Pancho</title>
+
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" th:href="@{/css/style.css}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/afed86958e.js"></script>
+</head>
+<body>
+<header th:fragment="header" class="header">
+    <div class=" container logo-nav">
+        <a href="index.html">
+            <img class="logo" src="https://i.ibb.co/zF1WqT4/logo.png" alt="logo"/>
+        </a>
+        <span class="menu-icon"><i class="fa fa-bars" id="bars"></i></span>
+        <nav class="navigation">
+            <ul>
+                <li class="active">
+                    <a th:href="@{/}" class="home"><i class="fa fa-usd"> <span>Vender</span></i></a>
+                </li>
+                <li>
+                    <a th:href="@{/manageclient}" class="clients"><i class="fa fa-address-book-o"> <span> Clientes</span></i></a>
+                </li>
+                <li>
+                    <a th:href="@{/managesupplier}" class="prov"><i class="fa fa-truck"><span> Proveedores </span></i></a>
+                </li>
+                <li>
+                    <a th:href="@{/manageproduct}" class="inventory"><i class="fa fa-hdd-o"><span> Inventario</span></i></a>
+                </li>
+                <li>
+                    <a th:href="@{/utilities}" class="utility"><i class="fa fa-file-text"><span> Utilidades</span></i></a>
+                </li>
+                <li>
+                    <form method="post" th:action="@{/logout}">
+                        <a href="#" onclick="this.parentNode.submit()"><i class="fa fa-sign-out"><span> Salir</span></i></a>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <hr/>
+</header>
+
+<footer th:fragment="footer" id="footer">
+    <div class="container">
+        <div class="copyright"><a href="https://github.com/The-WebOnes" target="_blank">&copy; <strong>The
+            WebOnes.</strong></a> Todos los Derechos Reservados
+        </div>
+        <div class="credits"> Aseguramiento de la Calidad de Software<a href="https://www.uady.mx" target="_blank"> UADY
+            2021</a>
+        </div>
+    </div>
+</footer>
+<!-- This is for a responsive design, it allows to hide the menu on screens with width <=767px  -->
+<script th:fragment="script">
+    jQuery('document').ready(function ($) {
+        var menuBtn = $('.menu-icon'),
+            menu = $('.navigation ul');
+        menuBtn.click(function () {
+            if (menu.hasClass('show')) {
+                menu.removeClass('show');
+            } else {
+                menu.addClass('show');
+            }
+        })
+    })
+</script>
+<script th:fragment="jquery" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script th:fragment="popper"  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</body>
+</html>

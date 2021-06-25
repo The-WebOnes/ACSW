@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head th:replace="layout/template :: head"></head>
+<body>
+<header th:replace="layout/template :: header"></header>
+<main class="main-util">
+    <section class="h-50">
+        <div class="container h-100">
+            <div class="row justify-content-md-center h-100">
+                <div class="just-padding">
+                    <div class="list-group list-group-root well">
+                        <a href="#item-1" class="list-group-item" data-toggle="collapse">
+                            <i class="fa fa-chevron-right"></i>Reportes
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="badge badge-primary badge-pill"> <i class="fa fa-gears"></i>En desarrollo</span>
+                        </a>
+                        <div class="list-group collapse" id="item-1">
+                            <a href="#" class="list-group-item" data-toggle="collapse">
+                                <i class="fa fa-file-text-o"></i>Reporte del día
+                            </a>
+                            <a href="#item-1-2" class="list-group-item" data-toggle="collapse">
+                                <i class="fa fa-chevron-right"></i>Reporte por fecha
+                            </a>
+                            <div class="list-group collapse" id="item-1-2">
+                                <a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>Mes</a>
+                                <a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>Semana</a>
+                                <a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>Periodo Específico</a>
+                            </div>
+                        </div>
+                        <a href="#item-2" class="list-group-item" data-toggle="collapse">
+                            <i class="fa fa-chevron-right"></i>Promociones
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="badge badge-primary badge-pill"> <i class="fa fa-gears"></i>En desarrollo</span>
+                        </a>
+                        <div class="list-group collapse" id="item-2">
+                            <a href="#item-2-1" class="list-group-item" data-toggle="collapse">
+                                <i class="fa fa-users"></i>Público en General
+                            </a>
+                            <div class="list-group collapse" id="item-2-1">
+                                <a href="#" class="list-group-item"><i class="fa fa-usd"></i>Artículo en promoción</a>
+                                <a href="#" class="list-group-item"><i class="fa fa-usd"></i>Artículo en promoción</a>
+                                <a href="#" class="list-group-item"><i class="fa fa-usd"></i>Artículo en promoción</a>
+                            </div>
+                            <a href="#item-2-2" class="list-group-item" data-toggle="collapse">
+                                <i class="fa fa-user-plus"></i>Clientes Distinguidos
+                            </a>
+                            <div class="list-group collapse" id="item-2-2">
+                                <a href="#" class="list-group-item"><i class="fa fa-usd"></i>Artículo en promoción</a>
+                                <a href="#" class="list-group-item"><i class="fa fa-usd"></i>Artículo en promoción</a>
+                                <a href="#" class="list-group-item"><i class="fa fa-usd"></i>Artículo en promoción</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer th:replace="layout/template :: footer"></footer>
+<script th:replace="layout/template :: script"></script>
+<script th:replace="layout/template :: jquery"></script>
+<script th:replace="layout/template :: popper"></script>
+<script>
+    $(function () {
+        $('.list-group-item').on('click', function () {
+            $('.fa', this)
+                .toggleClass('fa fa-chevron-right')
+                .toggleClass('fa fa-chevron-down');
+        });
+    });
+</script>
+</body>
+</html>

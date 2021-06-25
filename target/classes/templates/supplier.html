@@ -1,0 +1,61 @@
+<!DOCTYPE html >
+<html lang="es"  xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/template :: head"></head>
+<body>
+<header th:replace="layout/template :: header"></header>
+<main class="main">
+    <section class="h-50">
+        <div class="container h-100">
+            <h1 class="title" th:text="${mensaje}"></h1>
+            <div class="row justify-content-md-center h-100">
+                <div th:if="${suppliers != null and !suppliers.isEmpty()}">
+                    <a th:href="@{/managesupplier/addsupplier}" class="buttons-link"><i class="fa fa-plus"> <span>Agregar Proveedor</span></i></a>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Modificar</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="supplier:${suppliers}">
+                            <td th:text="${supplier.supplierName}"></td>
+                            <td th:text="${supplier.supplierLastName}"></td>
+                            <td th:text="${supplier.supplierPhone}"></td>
+                            <td th:text="${supplier.supplierEmail}"></td>
+                            <td th:text="${supplier.supplierBusiness}"></td>
+                            <td><a th:href='@{/managesupplier/edit/}+${supplier.idSupplier}' class="buttons-link">
+                                <i class="fa fa-pencil"> <span th:text="Editar"></span></i>
+                            </a>
+                            </td>
+                            <td><a th:href='@{/managesupplier/delete/}+${supplier.idSupplier}' class="buttons-link">
+                                <i class="fa fa-trash"><span th:text="Eliminar"></span></i>
+                            </a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="back">
+                        <a th:href="@{/ }" class="buttons-link"><i class="fa fa-arrow-circle-left ">
+                            <span>Regresar</span></i></a>
+                    </div>
+
+                </div>
+                <div th:if="${suppliers.isEmpty()}">
+                    <a th:href="@{/managesupplier/addsupplier}" class="buttons-link"><i class="fa fa-plus"> <span>Agregar Proveedor</span></i></a>
+                    <p>&nbsp;&nbsp;---Lista vacía---<br><i id="sad" class="fa fa-frown-o"></i></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+<footer th:replace="layout/template :: footer"></footer>
+<script th:replace="layout/template :: script"></script>
+<script th:replace="layout/template :: jquery"></script>
+<script th:replace="layout/template :: popper"></script>
+</body>
+</html>
