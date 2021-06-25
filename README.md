@@ -28,4 +28,4 @@ We developed a <b>Point of Sale System for a corner store</b> we focused on the 
 
 <h3 align="left"> 🟩🟩🟩⬜ Our Progress: </h3>
 
-![Preview](https://i.ibb.co/gMKQJ1m/preview.gif)
+![Preview](https://i.ibb.co/VW4bTyJ/preview.gif)
