@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    transition: 0.2s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    color: yellowgreen;
+    font-size: 1.2rem;
+    line-height: 1.4em;
+}
+
+/*Header with the logo and menu*/
+/*------------------------------------------------------*/
+.header {
+    background-color: #f7f9fb;
+    padding: 1px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: #121212 100px;
+}
+
+/*For all the links in the header*/
+.header a {
+    color: #00B2B2;
+    text-decoration: none;
+}
+
+/*Size for the logo of the company*/
+img.logo {
+    height: 90px;
+}
+
+/*Doesn't show the button "Ver Menu", only applies when the screen is bigger than 767px*/
+.menu-icon {
+    display: none;
+}
+
+.menu-icon i {
+    font-size: 25px;
+}
+
+/*Change the color and add a transition of the button "Ver Menú" when the mouse is over*/
+span.menu-icon:hover {
+    transition: all 0.2s linear;
+    color: #00B2B2
+}
+
+/*Sets the logo to make it responsive within the page*/
+.logo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*This sets and show in one line the list*/
+.navigation ul {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+}
+
+/*This take off the underline of the links*/
+.navigation ul li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/*Add the effect of transition when the mouse is over*/
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s linear;
+}
+
+/*Change the color when the mouse is over*/
+.navigation ul li a:hover {
+    color: #FF4D4D !important;
+}
+
+/*Main and center of the page*/
+/*------------------------------------------------------*/
+.main {
+    padding: 10rem 0 4rem 0;
+    color: black;
+}
+.main-edit {
+    margin-top: 1em;
+    padding-top: 7.5rem;
+    color: black;
+}
+
+.main-util {
+    margin: 1em auto;
+    padding-top: 7.5rem;
+}
+.main table{
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.main th,td{
+    padding: 25px!important;
+}
+
+.container {
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.brand {
+    overflow: hidden;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .05);
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.brand img {
+    height: 120px;
+}
+
+.login-page .card-wrapper {
+    width: 400px;
+}
+
+.login-page .card {
+    border-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .05);
+}
+
+.login-page .card.fat {
+    padding: 10px;
+}
+
+.login-page .card .card-title {
+    margin-bottom: 30px;
+}
+
+.login-page .form-control {
+    border-width: 2.3px;
+}
+
+.login-page .form-group label {
+    width: 100%;
+}
+
+.login-page .btn.btn-block {
+    padding: 12px 10px;
+    background-color: #00B2B2;
+}
+
+.edit-form{
+    padding: 0 5rem 0 5rem;
+}
+.edit-form input{
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+#amount{
+    font-weight: bold;
+    color: #FF4D4D;
+}
+#amount-day, #sells-day{
+    color: #121212;
+}
+
+#save-button{
+    text-align: center;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#forgot {
+    font-size: 13px;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+#error{
+    color: #FF4D4D;
+    font-size: 12px;
+}
+#sad{
+margin-left: 50%;
+}
+.buttons-link{
+    color: #00B2B2
+}
+
+.buttons-link:hover{
+    color: #FF4D4D !important;
+    transition: all 0.2s linear;
+}
+
+.back{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.just-padding {
+
+width: 100%;
+}
+
+.list-group.list-group-root {
+    padding: 0;
+    overflow: hidden;
+}
+
+.list-group.list-group-root .list-group {
+    margin-bottom: 0;
+}
+
+.list-group.list-group-root .list-group-item {
+    border-radius: 0;
+    border-width: 1px 0 0 0;
+}
+
+.list-group.list-group-root > .list-group-item:first-child {
+    border-top-width: 0;
+}
+
+.list-group.list-group-root > .list-group > .list-group-item {
+    padding-left: 30px;
+}
+
+.list-group.list-group-root > .list-group > .list-group > .list-group-item {
+    padding-left: 45px;
+}
+
+.list-group-item .fa{
+    margin-right: 5px;
+}
+
+/*Bottom of the page*/
+/*------------------------------------------------------*/
+#footer {
+    background: #f2f5f8;
+    padding: 20px 0 30px 0;
+    font-size: 14px;
+    margin-top: 1.5rem;
+}
+
+#footer .copyright {
+    text-align: center;
+    padding-top: 5px
+}
+
+#footer .copyright a {
+    color: #00B2B2 !important;
+    text-decoration: none
+}
+
+#footer .copyright a:hover {
+    color: #0c2e8a !important
+}
+
+#footer .credits {
+    text-align: center;
+    font-size: 13px;
+    color: #555
+}
+
+#footer .credits a {
+    color: #0c2e8a
+}
+
+/*This is when the screen is reduced or the width max is 767}
+It hides the top menu and show it when you click on it
+*/
+@media only screen and (max-width: 767px) {
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+    }
+
+    .navigation {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navigation ul {
+        display: none;
+    }
+
+    .navigation ul.show {
+        display: block;
+    }
+
+    .navigation ul li {
+        display: block;
+        width: 50%
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.2s linear;
+    }
+
+    .navigation ul li a:hover {
+        color: #FF4D4D !important;
+    }
+
+    main {
+        padding-top: 10rem;
+        margin: 3rem 1em 2rem 1em;
+    }
+
+    header {
+        margin-right: 1em;
+    }
+
+    img.logo {
+        height: 75px;
+    }
+
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main class="main">
+    <h1>Datos del cliente</h1>
+
+    <form th:action="@{/managesupplier/save}" method="post" th:object="${supplier}">
+        <input type="hidden" name="idSupplier" th:field="*{idSupplier}"/>
+
+        <label for="supplierName">Nombre:</label>
+        <input type="text" id="supplierName" name="supplierName" th:field="*{supplierName}"/>
+        <span th:if="${#fields.hasErrors('supplierName')}" th:errors="*{supplierName}">Error Nombre</span>
+
+        <label for="supplierLastName">Apellido:</label>
+        <input type="text" id="supplierLastName" name="supplierLastName" th:field="*{supplierLastName}"/>
+        <span th:if="${#fields.hasErrors('supplierLastName')}" th:errors="*{supplierLastName}">Error Marca</span>
+
+        <label for="supplierPhone"> Telefono:</label>
+        <input type="tel" id="supplierPhone" name="supplierPhone" th:field="*{supplierPhone}"/>
+        <span th:if="${#fields.hasErrors('SupplierPhone')}" th:errors="*{supplierPhone}">Error Teléfono</span>
+
+        <label for="supplierEmail"> Email:</label>
+        <input type="text" id="supplierEmail" name="SupplierEmail" th:field="*{supplierEmail}"/>
+        <span th:if="${#fields.hasErrors('SupplierEmail')}" th:errors="*{supplierEmail}">Error Correo electrónico</span>
+
+        <label for="supplierBusiness"> Empresa:</label>
+        <input type="text" id="supplierBusiness" name="supplierBusiness" th:field="*{supplierBusiness}"/>
+        <span th:if="${#fields.hasErrors('supplierBusiness')}"
+              th:errors="*{supplierBusiness}">Error Nombre Empresa</span>
+
+        <input type="submit" name="save" value="Guardar"/>
+    </form>
+    <a th:href="@{/ }">Regresar</a>
+</main>
+</body>
+</html>

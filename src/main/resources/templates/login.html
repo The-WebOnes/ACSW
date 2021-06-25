@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head th:replace="layout/template :: head"></head>
+<body class="login-page">
+<main>
+    <section class="h-100">
+        <div class="container h-100">
+            <div class="row justify-content-md-center h-100">
+                <div class="card-wrapper">
+                    <div class="brand">
+                        <img src="https://i.ibb.co/zF1WqT4/logo.png" alt="logo" class="logo">
+                    </div>
+                    <div class="card fat">
+                        <div class="card-body">
+                            <h4 class="card-title">Login</h4>
+                            <form method="POST" class="my-login-validation" novalidate="" th:action="@{/login}">
+                                <div class="form-group">
+                                    <label for="username">Usuario</label>
+                                    <input id="username" type="text" class="form-control" name="username" value=""
+                                           required autofocus>
+                                    <div class="invalid-feedback">
+                                        Usuario inválido
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Contraseña
+                                        <a href="#" class="float-right" id="forgot"> ¿Olvidaste tu contraseña?</a>
+                                    </label>
+                                    <input id="password" type="password" class="form-control" name="password" required
+                                           data-eye>
+                                    <div class="invalid-feedback"> Contraseña inválida</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="custom-checkbox custom-control">
+                                        <input type="checkbox" name="remember" id="remember"
+                                               class="custom-control-input">
+                                        <label for="remember" class="custom-control-label">Recuérdame</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group m-0">
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                        Iniciar Sesión
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer th:replace="layout/template :: footer"></footer>
+<script th:replace="layout/template :: jquery"></script>
+<script th:replace="layout/template :: popper"></script>
+<script type="text/javascript" th:src="@{/js/login.js}"></script>
+</body>
+
+</html>
